@@ -10,6 +10,7 @@ export default function Navbarmain() {
     return (
         <div className="p-5 bg-white text-blue-600 w-[100vw] cursor-default">
             <div className="md:flex justify-between md:w-[90%] w-[100%] mx-auto">
+                <Link to="/">
                 <motion.div className="font-extrabold text-5xl md:ml-0 ml-[1.2rem] md:mb-0 mb-3 text-left"
                 whileHover={{scale:1.1}}>
                     {text.map((el, i) => (
@@ -28,9 +29,10 @@ export default function Navbarmain() {
                     ))}
                     
                 </motion.div>
+                </Link>
                 <div className="flex justify-around items-end md:mt-0 mt-[1.35rem]">
                     <div className="px-3 text-lg font-light">
-                        <motion.div whileHover={{scale:1.1}} className="text-blue-600 hover:font-normal duration-100">Home</motion.div>
+                        <motion.div whileHover={{scale:1.1}} className="text-blue-600 hover:font-normal duration-100"><Link to="/home">Home</Link></motion.div>
                     </div>
                     <div className="px-3 text-lg font-light">
                         <motion.div whileHover={{scale:1.1}} className="text-blue-600 hover:font-normal duration-100"><Link to="/discover">Discover</Link></motion.div>
@@ -40,7 +42,7 @@ export default function Navbarmain() {
                         <motion.div whileHover={{scale:1.1}} className="text-blue-600 hover:font-normal duration-100"><Link to="/connect">Connect</Link></motion.div>
                     </div>
                     <div className="px-3 text-lg font-light">
-                        <motion.div whileHover={{scale:1.1}} className="text-blue-600 hover:font-normal duration-100">Help</motion.div>
+                        <motion.div whileHover={{scale:1.1}} className="text-blue-600 hover:font-normal duration-100"><Link to="/help">Help</Link></motion.div>
                     </div>
                 </div>
             </div>

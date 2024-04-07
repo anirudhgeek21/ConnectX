@@ -21,7 +21,7 @@ export default function Communitychat() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className={`message flex items-center p-2 rounded-lg mb-2 bg-blue-100 text-blue-700 self-end" : "bg-gray-100 text-gray-700"
+            className={`message flex items-center p-2 rounded-lg mb-2 bg-slate-100 text-blue-700 self-end" : "bg-gray-100 text-gray-700"
             }`}
           >
             <span className="font-medium mr-2">mein:</span>
@@ -32,7 +32,7 @@ export default function Communitychat() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className={`message flex items-center p-2 rounded-lg mb-2 bg-blue-100 text-blue-700 self-end" : "bg-gray-100 text-gray-700"
+            className={`message flex items-center p-2 rounded-lg mb-2 bg-slate-100 text-blue-700 self-end" : "bg-gray-100 text-gray-700"
             }`}
           >
             <span className="font-medium mr-2">mein:</span>
@@ -54,7 +54,7 @@ export default function Communitychat() {
         ))}
       </motion.div>
 
-      <motion.div initial={{opacity:0}} whileInView={{opacity:1}} className="message-input w-[17%] flex items-center py-2 px-4 rounded-lg shadow-lg absolute bottom-2 right-[5rem] bg-white">
+      <motion.div initial={{opacity:0}} whileInView={{opacity:1}} className="message-input w-[17%] flex items-center py-2 px-4 rounded-lg shadow-lg absolute bottom-2 right-[3.85rem] bg-white">
         <input
           ref={messageInputRef}
           type="text"

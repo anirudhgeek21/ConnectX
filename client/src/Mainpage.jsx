@@ -5,10 +5,15 @@ import { motion } from 'framer-motion';
 import Navbarmain from './components/Navbars/Navbarmain';
 import Landing from './components/Landing';
 import Solve from './components/Solve/Solve';
-import Connect from './components/Discover/Discover'
+import Connect from './components/Connect/Connect';
+import Chat from './components/Connect/Chat';
+import Discover from './components/Discover/Discover'
 import Signup from './components/Authentications/Signup'; 
+import Signin from './components/Authentications/Signin';
 import Footer from './components/Footer';
 import Community from './components/Discover/Communityinternal/Community';
+import Help from './components/Help/Help';
+import Home from './components/Home/Event';
 
 export default function Landingpage() {
   return (
@@ -40,7 +45,7 @@ export default function Landingpage() {
             viewport={{ once: true }}
             
             >
-            <Connect />
+            <Discover />
             </motion.div>
           } /> 
           
@@ -64,17 +69,80 @@ export default function Landingpage() {
             <Community />
             </motion.div>
           } /> 
+          <Route path="/help" element={
+            <motion.div className='duration-500 '
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            
+            >
+            <Help />
+            </motion.div>
+          } /> 
+          <Route path="/home" element={
+            <motion.div className='duration-500 mb-24'
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            
+            >
+            <Home />
+            </motion.div>
+          } /> 
+          <Route path="/connect" element={
+            <motion.div className='duration-500 mb-24'
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            
+            >
+            <Connect />
+            </motion.div>
+          } /> 
+          <Route path="/connect/chat" element={
+            <motion.div className='duration-500 '
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            
+            >
+            <Chat />
+            </motion.div>
+          } /> 
+
+
+<Route path="/signin" element={
+            <motion.div className='duration-500'
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            
+            >
+            <Signin />
+            </motion.div>
+          } /> 
+          
+          <Route path="/signup" element={
+            <motion.div className='duration-500 '
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            
+            >
+            <Signup />
+            </motion.div>
+          } /> 
           
         </Routes>
       </div>
 
-      <motion.div
+      {/* <motion.div
       className='duration-500 w-[100vw] backdrop-blur-lg'
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}>
         <Footer />
-      </motion.div>
+      </motion.div> */}
     </Router>
   );
 }

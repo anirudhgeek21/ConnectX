@@ -18,7 +18,7 @@ export default function Landing() {
       "linear-gradient(180deg, rgb(230, 255, 0) 0%, rgb(3, 209, 155) 100%)"
     ]);
     const color = useTransform(x, xInput, [
-      "rgb(211, 9, 225)",
+      "rgb(255, 255, 255)",
       "rgb(255, 255, 255)",
       "rgb(3, 209, 0)"
     ]);
