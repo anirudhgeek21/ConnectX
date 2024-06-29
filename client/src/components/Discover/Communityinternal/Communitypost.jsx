@@ -47,8 +47,7 @@ export default function Communitypost() {
                     onClick={handleCloseModal}
                 >
                     <motion.div
-                        initial={{ y: "-100vh" }}
-                        animate={{ y: 0 }}
+                        
                         className="bg-white rounded-lg shadow-lg p-4 h-[70%] w-[60%] overflow-y-auto"
                     >
                         <div>
@@ -56,7 +55,7 @@ export default function Communitypost() {
                             <div className="font-medium text-center mt-2">{selectedPost.username}</div>
                         </div>
                         <div className="px-4 py-3 break-words">
-                            <motion.div whileHover={{scale:1.1}} transition={{ duration: 0.5 }}> 
+                            <motion.div> 
                                 <img src={image6} alt="" className="mx-auto w-[50%] mt-3" />
                             </motion.div>
                             <div className="text-center mt-5">
@@ -71,7 +70,7 @@ export default function Communitypost() {
             )}
 
       
-            <div className="grid grid-cols-2 gap-[1.5rem] h-[100%]">
+            <div className="grid grid-cols-3 gap-[1.5rem] h-[100%]">
                 {postsData.map(post => (
                     <motion.div
                         key={post.id}

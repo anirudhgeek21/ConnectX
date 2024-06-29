@@ -80,7 +80,7 @@ export default function Landing() {
                     </svg>
                 </motion.div>
 
-                <Link to="/signin">
+                <Link to="/signup">
                     <motion.div className="text-[#0000ff] text-lg font-light bg-white mt-[4.7rem] text-center w-[50%] py-1 rounded-md px-5 mx-auto"
                         whileHover={{scale:1.1}}
                         whileTap={{scale:1}}>

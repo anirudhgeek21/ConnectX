@@ -8,7 +8,7 @@ export default function Communitycard(prop) {
     <Fragment className="h-[100px]">
       <Link to="/connect/chat">
         <motion.div
-            className="rounded-lg shadow-md w-[100%] mx-auto text-black border-black mt-7"
+            className="rounded-lg shadow-md w-[95%] mx-auto text-black border-black mt-7"
             whileHover={{ scale: 1.1 }}
             whileTap={{scale: 1}}
         >

@@ -74,12 +74,12 @@ export default function Landing() {
                 <div className="w-[10%] ml-10">
                     <Communitybody />
                 </div>
-                <motion.div className="w-[60%] ml-36 mr-16 mt-12 mb-6">
+                <motion.div className="w-[80%] ml-36 mr-16 mt-12 mb-6">
                         <Communitypost />
                 </motion.div>
-                <div className="w-[25%] h-[50vh] mt-12">
+                {/* <div className="w-[25%] h-[50vh] mt-12">
                     <Communitychat />
-                </div>
+                </div> */}
 
             </div>
 

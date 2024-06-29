@@ -9,6 +9,7 @@ import {Link} from 'react-router-dom';
 import image6 from './image9.svg';
 import Communitycard from "../Discover/Communitycard";
 import ConnectCard from '../Connect/ConnectCards';
+import TrendingPosts from './TrendingPosts';
 
 
 export default function Event() {
@@ -42,7 +43,7 @@ export default function Event() {
                     <motion.div className="text-[#0000ff] text-sm font-normal bg-white text-center w-[15%] py-1 rounded-md px-5 ml-20 mt-7"
                         whileHover={{scale:1.1}}
                         whileTap={{scale:1}}>
-                        View all events
+                        <Link to="/event">View all Events</Link>
                     </motion.div>
                     </Link>
                 </div>
@@ -66,44 +67,29 @@ export default function Event() {
             </motion.div>
 
 
-            <motion.div className="mt-8 text-3xl font-thin text-center">Connect with Peeps</motion.div>
+            <motion.div className="mt-8 text-3xl font-thin text-center">Trending around you</motion.div>
             <motion.div initial={{opacity:0}}
               whileInView={{opacity:1}}  className="flex justify-around duration-500 w-[100vw] mx-auto ">
               
-              <motion.div initial={{opacity:0}}
-              whileInView={{opacity:1}} >
-              <ConnectCard text="🟢 online"/>
-              </motion.div>
-              <div>
-              <ConnectCard text="🟢 online"/>
-              </div>
-              <div>
-              <ConnectCard text="🟢 online"/>
-              </div>
-              <div>
-              <ConnectCard text="🟢 online"/>
-              </div>
-              <div>
-              <ConnectCard text="🟢 online"/>
-              </div>
-              <div>
-              <ConnectCard text="🟢 online"/>
-              </div>
-              <div>
-              <ConnectCard text="🟢 online"/>
-              </div>
-              <div>
-              <ConnectCard text="🟢 online"/>
-              </div>
-              <div>
-              <ConnectCard text="🟢 online"/>
-              </div>
+              <TrendingPosts />
+              
+            </motion.div>
+
+            <motion.div className="mt-8 text-3xl font-thin text-center">Posts From Your Friends</motion.div>
+            <motion.div initial={{opacity:0}}
+              whileInView={{opacity:1}}  className="flex justify-around duration-500 w-[100vw] mx-auto ">
+              
+              <TrendingPosts />
+              
             </motion.div>
 
 
-            <motion.div className="mt-12 mb-[-18px] text-3xl font-thin text-center">Discover new groups</motion.div>
+
+            
+
+            <motion.div className="mt-10 mb-[-18px] text-3xl font-thin text-center">Discover new groups</motion.div>
             <motion.div initial={{opacity:0}}
-              whileInView={{opacity:1}}  className="flex justify-around duration-500 w-[100vw] mx-auto mb-[-20px]">
+              whileInView={{opacity:1}}  className="flex justify-around duration-500 w-[100vw] mx-auto mb-[-20px] px-6">
               
               <motion.div initial={{opacity:0}}
               whileInView={{opacity:1}} >
@@ -123,7 +109,42 @@ export default function Event() {
               </div>
             </motion.div>
 
-            
+
+
+            <motion.div className="mt-20 text-3xl font-thin text-center">Discover New People</motion.div>
+            <motion.div initial={{opacity:0}}
+              whileInView={{opacity:1}}  className="flex justify-around duration-500 w-[100vw] mx-auto px-6">
+              
+              <motion.div initial={{opacity:0}}
+              whileInView={{opacity:1}} >
+              <ConnectCard text="🟢 online"/>
+              </motion.div>
+              <div>
+              <ConnectCard text="🟢 online"/>
+              </div>
+              <div>
+              <ConnectCard text="🟢 online"/>
+              </div>
+              <div>
+              <ConnectCard text="🟢 online"/>
+              </div>
+              <div>
+              <ConnectCard text="🟢 online"/>
+              </div>
+              <div>
+              <ConnectCard text="🟢 online"/>
+              </div>
+              <div>
+              <ConnectCard text="🟢 online"/>
+              </div>
+              <div>
+              <ConnectCard text="🟢 online"/>
+              </div>
+              <div>
+              <ConnectCard text="🟢 online"/>
+              </div>
+            </motion.div>
+
             
             
 

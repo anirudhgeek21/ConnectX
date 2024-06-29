@@ -9,7 +9,7 @@ export default function Communitycard(prop) {
     <Fragment className="h-[200px] w-[20%]">
       <Link to="/discover/community">
         <motion.div
-            className="rounded-lg shadow-md flex flex-col w-[85%] mx-auto text-black border-black mt-10"
+            className="rounded-lg shadow-md flex flex-col w-[90%] mx-auto text-black border-black mt-10"
             whileHover={{ scale: 1.1 }}
             whileTap={{scale: 1}}
         >

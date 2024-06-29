@@ -32,10 +32,10 @@ export default function Navbarlanding() {
                 </Link>
                 <div className="flex justify-around items-end md:mt-0 mt-[1.35rem]">
                     <div className="px-3 text-lg font-light">
-                        <motion.div whileHover={{scale:1.1}} className="text-blue-600 hover:font-normal duration-100"><Link to="/signin">Join us</Link></motion.div>
+                        <motion.div whileHover={{scale:1.1}} className="text-blue-600 hover:font-normal duration-100"><Link to="/signup">Join us</Link></motion.div>
                     </div>
                     <div className="px-3 text-lg font-light">
-                        <motion.div whileHover={{scale:1.1}} className="text-blue-600 hover:font-normal duration-100">Help</motion.div>
+                        <motion.div whileHover={{scale:1.1}} className="text-blue-600 hover:font-normal duration-100"><Link to="/help">Help</Link></motion.div>
                     </div>
                 </div>
             </div>

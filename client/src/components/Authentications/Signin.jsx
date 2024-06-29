@@ -1,7 +1,8 @@
-import React,{Fragment} from "react";
+import React,{Fragment , useState} from "react";
 import {motion} from 'framer-motion';
 import { Link } from "react-router-dom";
 import image1 from './image1.svg';
+
 
 export default function Signin() {
     return (
