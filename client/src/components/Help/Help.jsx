@@ -8,24 +8,24 @@ export default function Help() {
 
   return (
     <Fragment>
-      <div className="flex flex-col md:w-[45vw] w-[85vw] mx-auto mt-10 border-slate-300 mb-2 text-slate-500">
+      <div className="flex flex-col md:w-[45vw] w-[85vw] text-sm md:text-base mx-auto mt-10 border-slate-300 mb-2 text-slate-500">
         {user ? (
           <motion.div className="flex justify-around">
                <motion.div
                whileHover={{ scale: 1.06 }}
-               className="text-center w-[32%] border border-b-[0.1px] rounded-lg border-slate-300 px-2 py-2 mb-5 hover:text-blue-600 duration-150 hover:border-blue-600"
+               className="text-center w-[32%] border border-b-[0.1px] text-xs md:text-base rounded-lg border-slate-300 px-2 py-2 mb-5 hover:text-blue-600 duration-150 hover:border-blue-600"
                >
                Create a New account
                </motion.div>
                <motion.div
                whileHover={{ scale: 1.06 }}
-               className="text-center w-[32%] border border-b-[0.1px] border-red-400 px-2 py-2 mb-5 rounded-lg hover:text-white duration-200 hover:bg-red-700 hover:font-light"
+               className="text-center w-[32%] border border-b-[0.1px] text-xs md:text-base border-red-400 px-2 py-2 mb-5 rounded-lg hover:text-white duration-200 hover:bg-red-700 hover:font-light"
                >
-               Logout
+               Logout account
                </motion.div>
                <motion.div
                whileHover={{ scale: 1.06 }}
-               className="text-center w-[32%] border border-b-[0.1px] border-red-400 px-2 py-2 mb-5 rounded-lg hover:text-white duration-200 hover:bg-red-700 hover:font-light"
+               className="text-center w-[32%] border border-b-[0.1px] text-xs md:text-base border-red-400 px-2 py-2 mb-5 rounded-lg hover:text-white duration-200 hover:bg-red-700 hover:font-light"
                >
                Delete Account
                </motion.div>

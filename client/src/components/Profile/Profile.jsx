@@ -29,7 +29,7 @@ const ProfilePage = ({ userId, picturePath }) => {
   }, [userId, token]);
 
   if (!user) {
-    return <div>Loading...</div>;
+    return <div className='w-[80%] mx-auto'>Loading...</div>;
   }
 
   const {
@@ -44,22 +44,18 @@ const ProfilePage = ({ userId, picturePath }) => {
 
   return (
     <div className="flex flex-col items-center justify-center bg-white p-4">
-      <motion.div
-        className="bg-white rounded-lg mt-3 p-6 w-[80%]"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="flex flex-row items-center justify-between">
+
+      <div className="bg-white rounded-lg mt-3 p-6 w-full md:w-[80%]">
+        <div className="flex flex-col md:flex-row items-center justify-between">
           <motion.img
-            className="rounded-full w-32 h-32 mb-4"
+            className="rounded-full w-32 h-32 mb-4 md:mr-6 md:mb-0"
             src={picturePath}
             alt="Profile"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5 }}
           />
-          <motion.div className="flex flex-col text-right justify-between ">
+          <div className="flex flex-col text-center md:text-left">
             <motion.div
               className="text-3xl font-bold mb-1"
               initial={{ opacity: 0 }}
@@ -83,7 +79,7 @@ const ProfilePage = ({ userId, picturePath }) => {
             >
               {college}
             </motion.div>
-          </motion.div>
+          </div>
         </div>
         <motion.div
           className="mt-4"
@@ -95,21 +91,10 @@ const ProfilePage = ({ userId, picturePath }) => {
             " Passionate developer with a love for creating beautiful and functional user interfaces. "
           </p>
         </motion.div>
-      </motion.div>
-
-      <motion.div
-        className="bg-white rounded-lg mt-4 p-6 w-[80%]"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
+      </div>
+      <div className="bg-white rounded-lg mt-4 p-6 w-full md:w-[80%]">
         <h3 className="text-xl font-bold mb-2">Communities</h3>
-        <motion.div
-          className="flex flex-wrap justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="flex flex-wrap justify-center">
           {communities.length === 0 ? (
             <p>No communities found</p>
           ) : (
@@ -125,22 +110,12 @@ const ProfilePage = ({ userId, picturePath }) => {
               />
             ))
           )}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
-      <motion.div
-        className="bg-white rounded-lg mt-4 p-6 w-[80%]"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
+      <div className="bg-white rounded-lg mt-4 p-6 w-full md:w-[80%]">
         <h3 className="text-xl font-bold mb-2">Events</h3>
-        <motion.div
-          className="flex flex-wrap justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="flex flex-wrap justify-center">
           {events.length === 0 ? (
             <p>No events found</p>
           ) : (
@@ -156,22 +131,12 @@ const ProfilePage = ({ userId, picturePath }) => {
               />
             ))
           )}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
-      <motion.div
-        className="bg-white rounded-lg mt-4 p-6 w-[80%]"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
+      <div className="bg-white rounded-lg mt-4 p-6 w-full md:w-[80%]">
         <h3 className="text-xl font-bold mb-2">Friends</h3>
-        <motion.div
-          className="flex flex-wrap justify-center mb-16"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="flex flex-wrap justify-center">
           {friends.length === 0 ? (
             <p>No friends found</p>
           ) : (
@@ -187,11 +152,13 @@ const ProfilePage = ({ userId, picturePath }) => {
               />
             ))
           )}
-        </motion.div>
+        </div>
+      </div>
 
-
+      <div className="bg-white rounded-lg mt-4 p-6 w-full md:w-[80%]">
         <h3 className="text-xl font-bold mb-2">Your Posts</h3>
-      </motion.div>
+        
+      </div>
     </div>
   );
 };

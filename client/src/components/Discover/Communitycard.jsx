@@ -1,29 +1,30 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { motion } from 'framer-motion';
 import image6 from './image6.svg';
 import { Link } from "react-router-dom";
 
-
-export default function Communitycard(prop) {
+const Communitycard = (props) => {
   return (
-    <Fragment className="h-[200px] w-[20%]">
+    <div className="w-full md:w-5/5 p-4">
       <Link to="/discover/community">
         <motion.div
-            className="rounded-lg shadow-md flex flex-col w-[90%] mx-auto text-black border-black mt-10"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{scale: 1}}
+          className="rounded-2xl shadow-md flex flex-col mx-auto text-black border-black"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 1 }}
         >
-            <div className="rounded-md h-[200px]"> 
-            <img src={image6} alt="" />
-            </div>
-            <motion.div className="w-[84%] text-center mx-auto font-bold text-2xl mt-9 h-[40px]">
+          <div className="rounded-md overflow-hidden">
+            <img src={image6} alt="" className="w-full" />
+          </div>
+          <motion.div className="text-center font-bold text-xl md:text-2xl mt-3 md:mt-6">
             Devcomm
-            </motion.div>
-            <motion.div className="text-center text-base px-6 mb-4 font-thin h-[50px] overflow-y-auto">  
+          </motion.div>
+          <motion.div className="text-center text-xs mt-2 md:text-base px-6 mb-4 font-thin">
             Largest tech soc of NSUT
-            </motion.div>
+          </motion.div>
         </motion.div>
       </Link>
-    </Fragment>
+    </div>
   );
-}
+};
+
+export default Communitycard;

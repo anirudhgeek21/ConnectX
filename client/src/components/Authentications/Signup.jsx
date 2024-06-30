@@ -106,7 +106,7 @@ const Form = () => {
 
   return (
     <Fragment>
-      <div className={`flex flex-col ${isLogin ? "md:flex-col-reverse md:mt-0" : "md:flex-row md:mt-16"} w-full mx-auto pb-20 justify-around`}>
+      <div className={`flex flex-col ${isLogin ? "md:flex-col-reverse md:mt-0 mt-20" : "md:flex-row md:mt-16 mt-8"} md:w-full w-[80%] mx-auto pb-20 justify-around`}>
         <Formik
           onSubmit={handleFormSubmit}
           initialValues={isLogin ? initialValuesLogin : initialValuesRegister}
