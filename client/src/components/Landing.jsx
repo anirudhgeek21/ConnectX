@@ -77,7 +77,7 @@ export default function Landing() {
           </motion.div>
 
           <Link to="/signup">
-            <motion.div className="text-[#0000ff] text-xs md:text-lg font-light bg-white text-center md:mt-8 mt-[-20%] w-[100%] md:w-[100%] md:px-10 py-2 px-5 rounded-md md:mr-36"
+            <motion.div className="text-[#0000ff] text-xs md:text-lg font-light bg-white text-center md:mt-8 mt-[-20%] w-[100%] md:w-[100%] md:px-10 py-2 px-5 rounded-md md:mr-56"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 1 }}
             >
