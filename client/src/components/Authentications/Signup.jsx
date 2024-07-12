@@ -54,7 +54,7 @@ const Form = () => {
     formData.append("picture", values.picture);
 
     try {
-      const savedUserResponse = await fetch("http://localhost:3001/auth/register", {
+      const savedUserResponse = await fetch("https://connect-x-backend.vercel.app/auth/register", {
         method: "POST",
         body: formData,
       });
@@ -72,7 +72,7 @@ const Form = () => {
 
   const login = async (values, onSubmitProps) => {
     try {
-      const loggedInResponse = await fetch("http://localhost:3001/auth/login", {
+      const loggedInResponse = await fetch("https://connect-x-backend.vercel.app/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
