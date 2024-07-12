@@ -49,7 +49,11 @@ app.get("/",(req,res) => {
   res.json("Hello server ready")
 })
 
-app.post("/auth/register", upload.single("picture"), register);
+app.post("/auth/register", upload.single("picture"), (req, res, next) => {
+  console.log("Request Body:", req.body);
+  console.log("Uploaded File:", req.file);
+  next();
+}, register);
 app.post("/post", verifyToken, upload.single("picture"), createPost);
 
 app.use("/auth", authRoutes);
