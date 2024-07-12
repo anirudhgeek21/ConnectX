@@ -10,7 +10,7 @@ export const register = async(req,res) =>{
             email,
             password,
             friends,
-            picturePath: req.file.path,
+            picturePath,
             pseudoName,
             communities,
             college,
